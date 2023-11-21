@@ -12,7 +12,7 @@
         $email = $_POST["email"];
         $senha = $_POST["senha"];
 
-        if ($email == "" && $senha == "") {
+        if ($email == "Admin" && $senha == "admin") {
             header("Location: /projeto_saa/pag03.html");
             exit();
         } else {
