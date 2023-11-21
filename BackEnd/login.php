@@ -13,7 +13,7 @@
         $senha = $_POST["senha"];
 
         if ($email == "" && $senha == "") {
-            header("Location: pag03.html");
+            header("Location: /projeto_saa/pag03.html");
             exit();
         } else {
             echo "Credenciais inválidas. Tente novamente.";
