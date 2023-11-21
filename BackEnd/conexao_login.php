@@ -4,7 +4,7 @@
     $Host = "localhost";
     $User = "root";
     $Pass = "";
-    $db = "cadastro";
+    $db = "login";
 
     $conn = new mysqli($Host, $User, $Pass, $db);
 
