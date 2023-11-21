@@ -7,8 +7,17 @@
             die("Erro ao conectar ao banco de dados" . mysqli_connect_error());
         }
 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
         $email = $_POST["email"];
         $senha = $_POST["senha"];
+
+        if ($email == "" && $senha == "") {
+            header("Location: pag03.html");
+            exit();
+        } else {
+            echo "Credenciais inválidas. Tente novamente.";
+        }
 
         $sql = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
         $resultado = $conn->query($sql);
@@ -19,7 +28,7 @@
                 echo "Email ou senha incorretas!";
 
             }
-
+        }
             $conn->close();
 
 
