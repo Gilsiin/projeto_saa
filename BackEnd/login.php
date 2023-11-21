@@ -1,6 +1,5 @@
 <?php
-
-    //login
+//login
 
     $conn = mysqli_connect($Host, $User, $Pass, $db);
 
