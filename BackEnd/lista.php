@@ -3,7 +3,7 @@
  $servername = "localhost";
  $username = "root";
  $password = "";
- $dbname = "saa";
+ $dbname = "saa2";
 
  $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -39,19 +39,22 @@
  }
 
  // Insere os dados no banco de dados
- $matricula = $_POST["matricula"];
+ $nomeMatricula = $_POST["NomeMatricula"];
+ $email = $_POST["email"];
  $problema = $_POST["problema"];
  $localizacao = $_POST["localizacao"];
  $foto = $_FILES["foto"]["name"];
 
- $sql = "INSERT INTO chamados (matricula, problema, localizacao, foto)
- VALUES ('$matricula', '$problema', '$localizacao', '$foto')";
+ $sql = "INSERT INTO chamados (NomeMatricula, Email, Problema, Localizacao, foto)
+ VALUES ('$nomematricula', '$email', '$problema', '$localizacao', '$foto')";
 
- if ($conn->query($sql) === TRUE) {
-    echo "Registro criado com sucesso";
- } else {
-    echo "Erro: " . $sql . "<br>" . $conn->error;
- }
+if ($conn->query($sql) === TRUE) {
+   // Redireciona para outra página
+   header("Location: /projeto_saa/pag02.html");
+   exit(); // Certifique-se de sair do script após o redirecionamento
+} else {
+   echo "Erro: " . $sql . "<br>" . $conn->error;
+}
 
  $conn->close();
 ?>

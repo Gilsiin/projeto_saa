@@ -4,7 +4,7 @@ function validarFormulario() {
     var email = document.getElementById("email").value;
     var problema = document.getElementById("problema").value;
     var localizacao = document.getElementById("localizacao").value;
-    var imagem = document.getElementById("imagem").value;
+    var foto = document.getElementById("imagem").value;
 
     //Caracteres permitidos no 1º input
     var nomeMatriculaRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ ]+[0-9]+$/;

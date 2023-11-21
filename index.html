@@ -28,23 +28,23 @@
             <!-- Primeira Coluna -->
             <div class="col-md-6 my-form-container">
                 <div class="mb-3">
-                    <form action="pag02.html" method="post" onsubmit="return validarFormulario()">
+                    <form action="BackEnd/lista.php" method="post" onsubmit="return validarFormulario()" enctype="multipart/form-data">
                         <h1 class="text-center">Preencha sua Reclamação</h1>
                         <p style="color: red; font-size: small; text-align: right;">(*) Campos Obrigatórios</p>
                         <label for="nomeMatricula" class="form-label">Nome e Matrícula: *</label>
-                        <input type="text" class="form-control" id="nomeMatricula" placeholder="Digite seu nome e matrícula">
+                        <input type="text" class="form-control" id="nomeMatricula" name="nomeMatricula"placeholder="Digite seu nome e matrícula">
                         <br>
                         <label for="email" class="form-label">Email: *</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
                         <br>
                         <label for="problema" class="form-label">Qual o problema? *</label>
-                        <input type="text" class="form-control" id="problema" placeholder="Descreva o problema">
+                        <input type="text" class="form-control" id="problema" name="problema" placeholder="Descreva o problema">
                         <br>
                         <label for="localizacao" class="form-label">Localização: *</label>
-                        <input type="text" class="form-control" id="localizacao" placeholder="Digite com precisão o local do problema">
+                        <input type="text" class="form-control" id="localizacao" name="localizacao" placeholder="Digite com precisão o local do problema">
                         <br>
                         <label for="imagem" class="form-label">Imagem: *</label>
-                        <input class="form-control" type="file" id="imagem" accept="image/*">
+                        <input type="file" id="foto" name="foto">
                         <br>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
