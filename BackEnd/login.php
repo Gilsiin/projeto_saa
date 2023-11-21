@@ -13,7 +13,7 @@
         $sql = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
         $resultado = $conn->query($sql);
 
-            if ($resultado->num_row > 0) {
+            if ($resultado->num_rows > 0) {
                 echo "Login bem-sucedido!";
             } else {
                 echo "Email ou senha incorretas!";
