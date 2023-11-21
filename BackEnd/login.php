@@ -14,9 +14,9 @@
         $resultado = $conn->query($sql);
 
             if ($resultado->num_row > 0) {
-                echo "Login bem-sucedido!"
+                echo "Login bem-sucedido!";
             } else {
-                echo "Email ou senha incorretas!"
+                echo "Email ou senha incorretas!";
 
             }
 
