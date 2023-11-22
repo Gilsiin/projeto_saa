@@ -42,3 +42,19 @@ body {
    max-width: 400px;
    margin: 0 auto;
 }
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+th, td {
+   border: 1px solid #ddd;
+   padding: 10px;
+   text-align: left;
+}
+
+img {
+   max-width: 159px;
+   max-height: 150px;
+}

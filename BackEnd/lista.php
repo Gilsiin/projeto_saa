@@ -3,7 +3,7 @@
  $servername = "localhost";
  $username = "root";
  $password = "";
- $dbname = "saa2";
+ $dbname = "saa3";
 
  $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -39,14 +39,15 @@
  }
 
  // Insere os dados no banco de dados
- $nomeMatricula = $_POST["NomeMatricula"];
+ $nome = $_POST["nome"];
+ $matricula = $_POST["matricula"];
  $email = $_POST["email"];
  $problema = $_POST["problema"];
  $localizacao = $_POST["localizacao"];
  $foto = $_FILES["foto"]["name"];
 
- $sql = "INSERT INTO chamados (NomeMatricula, Email, Problema, Localizacao, foto)
- VALUES ('$nomematricula', '$email', '$problema', '$localizacao', '$foto')";
+ $sql = "INSERT INTO chamados (Nome, Matricula, Email, Problema, Localizacao, foto)
+ VALUES ('$nome', '$matricula', '$email', '$problema', '$localizacao', '$foto')";
 
 if ($conn->query($sql) === TRUE) {
    // Redireciona para outra página
