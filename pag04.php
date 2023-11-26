@@ -1,9 +1,11 @@
 <?php
-    include("protect.php");
+
+include("BackEnd/login/protect.php");
+
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +49,8 @@
         </thead>
         <tbody>
             <?php
+            
+            
             // Conexão com o banco de dados
             $servername = "localhost";
             $username = "root";
@@ -104,6 +108,8 @@
             </div>
         </div>
     </div>
+
+    <p><a href="logout.php">Sair</a></p>
 
     <!-- Footer -->
     <footer class="container-fluid text-center mt-3" style="background-color: #3296D4; color: white; padding: 20px;">
