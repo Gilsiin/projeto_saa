@@ -28,6 +28,7 @@ include("BackEnd/login/protect.php");
         </div>
     </div>
     <br>
+    <p><a href="logout.php">Sair</a></p>
 
     <!-- Conteúdo no meio da página -->
     <div class="container">
@@ -91,7 +92,7 @@ include("BackEnd/login/protect.php");
                     echo "<td>" . $row['Email'] . "</td>";
                     echo "<td>" . $row['Problema'] . "</td>";
                     echo "<td>" . $row['Localizacao'] . "</td>";
-                    echo '<td><img src="BackEnd/fotos/' . $row['foto'] . '" width="159" height="150"/></td>';
+                    echo '<td><img src="BackEnd/fotos/' . $row['foto'] . '" width="100" height="100"/></td>';
                     echo '<td><a href="BackEnd/fotos/' . $row['foto'] . '" download>Baixar</a></td>';
                     echo '<td><form method="post"><input type="hidden" name="delete_id" value="' . $row['id'] . '"/><button type="submit">Resolvido</button></form></td>';
 
@@ -109,7 +110,7 @@ include("BackEnd/login/protect.php");
         </div>
     </div>
 
-    <p><a href="logout.php">Sair</a></p>
+    
 
     <!-- Footer -->
     <footer class="container-fluid text-center mt-3" style="background-color: #3296D4; color: white; padding: 20px;">
